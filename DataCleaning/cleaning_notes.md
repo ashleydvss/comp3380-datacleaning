@@ -17,4 +17,25 @@ After loading the dataset, we would like to
 ### My observation
 
 - What should I do with NaN values?
-- 
+    - for CleaningCast = filter which values are unknown for interesting question later = what movies do not have cvharacters (for interesting query later)
+    - 
+
+- rememebr to extract movie_assets and genre entity from movie entity
+
+Weird rows:
+6131, 6132 = stitched
+
+some have relase date NaN, I just call it none sepcified.
+
+The raw dataset used 0.0 for missing budgets and runtimes, but a movie doesn't actually last zero minutes or cost $0 (unless its made by a highschooler maybe?). If we leave them as zero, doing things like finding the average will be completely skewed and inaccurate, so I changed those zeros to null/NaN so they get ignored during calculations.
+
+
+
+
+## Explanation: Even though we're extracting a relationship table out of this (which is out of scope for data cleaning?) we need this table since there's no way too conenct 
+
+
+
+## TODO: in our ER diagram, revenue is not included. Why did we not want to include this again? this looks pretty nice to have
+
+
